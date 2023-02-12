@@ -1,6 +1,6 @@
-package jdbc.atiguigu2.dao;
+package com.atiguigu2.dao;
 
-import jdbc.atiguigu2.bean.Customer;
+import com.atiguigu2.bean.Customer;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -43,7 +43,7 @@ public interface CustomerDAO {
     /**
     * @Description: 根据指定id查询指定customer对象
     * @Param: [connection, id]
-    * @return: jdbc.atiguigu2.bean.Customer
+    * @return: bean.com.atiguigu2.Customer
     * @Author: hliu
     * @Date: 2023/2/10
     */
@@ -52,7 +52,7 @@ public interface CustomerDAO {
     /**
     * @Description: 查询表中的所有记录
     * @Param: [connection]
-    * @return: java.util.List<jdbc.atiguigu2.bean.Customer>
+    * @return: java.util.List<bean.com.atiguigu2.Customer>
     * @Author: hliu
     * @Date: 2023/2/10
     */

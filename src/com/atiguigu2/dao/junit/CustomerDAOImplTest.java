@@ -1,20 +1,14 @@
-package jdbc.atiguigu2.dao.junit;
+package com.atiguigu2.dao.junit;
 
 import com.atguigu.util.JDBCUtils;
-import jdbc.atiguigu2.bean.Customer;
-import jdbc.atiguigu2.dao.CustomerDAOImpl;
-import jdk.nashorn.internal.scripts.JD;
+import com.atiguigu2.bean.Customer;
+import com.atiguigu2.dao.CustomerDAOImpl;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.SQLException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * @Description CustomerDAOImpl的测试类

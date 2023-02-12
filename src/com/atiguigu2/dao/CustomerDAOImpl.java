@@ -1,6 +1,6 @@
-package jdbc.atiguigu2.dao;
+package com.atiguigu2.dao;
 
-import jdbc.atiguigu2.bean.Customer;
+import com.atiguigu2.bean.Customer;
 
 import java.sql.Connection;
 import java.sql.Date;

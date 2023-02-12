@@ -1,4 +1,4 @@
-package jdbc.atiguigu2.bean;
+package com.atguigu3.bean;
 
 import java.sql.Date;
 

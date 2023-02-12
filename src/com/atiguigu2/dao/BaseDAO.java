@@ -1,4 +1,4 @@
-package jdbc.atiguigu2.dao;
+package com.atiguigu2.dao;
 
 import com.atguigu.util.JDBCUtils;
 import jdk.nashorn.internal.ir.SplitReturn;
