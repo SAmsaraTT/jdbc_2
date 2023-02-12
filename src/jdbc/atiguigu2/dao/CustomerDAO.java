@@ -72,7 +72,7 @@ public interface CustomerDAO {
     * @Param: [connection]
     * @return: java.sql.Date
     * @Author: hliu
-    * @Date: 2023/2/10
+    * @Date: 2023/2/11
     */
     Date getMaxBirth(Connection connection);
 }
