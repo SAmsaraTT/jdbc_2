@@ -4,6 +4,7 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mchange.v2.c3p0.DataSources;
 import org.apache.commons.dbcp.BasicDataSourceFactory;
+import org.apache.commons.dbutils.DbUtils;
 
 import javax.sql.DataSource;
 import java.io.InputStream;
@@ -106,5 +107,23 @@ public class JDBCUtils {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    
+    /**
+    * @Description: 利用Dbutils关闭资源
+    * @Param: [connection, preparedStatement]
+    * @return: void
+    * @Author: hliu
+    * @Date: 2023/2/15
+    */
+    public static void closeResource1(Connection connection, Statement preparedStatement) {
+        DbUtils.closeQuietly(connection);
+        DbUtils.closeQuietly(preparedStatement);
+    }
+
+    public static void closeResource1(Connection connection, Statement preparedStatement, ResultSet resultSet) {
+        DbUtils.closeQuietly(connection);
+        DbUtils.closeQuietly(preparedStatement);
+        DbUtils.closeQuietly(resultSet);
     }
 }
