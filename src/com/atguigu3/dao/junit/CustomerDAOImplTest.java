@@ -1,6 +1,6 @@
 package com.atguigu3.dao.junit;
 
-import com.atguigu.util.JDBCUtils;
+import com.atguigu4.util.JDBCUtils;
 import com.atguigu3.bean.Customer;
 import com.atguigu3.dao.CustomerDAOImpl;
 import org.junit.Test;
@@ -71,7 +71,7 @@ public class CustomerDAOImplTest {
     public void getCustomerbyId() {
         Connection connection = null;
         try {
-            connection = JDBCUtils.getConnection();
+            connection = JDBCUtils.getConnection2();
             Customer customerbyId = customerDAO.getCustomerbyId(connection, 19);
             System.out.println(customerbyId);
         } catch (Exception e) {

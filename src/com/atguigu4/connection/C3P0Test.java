@@ -1,10 +1,12 @@
 package com.atguigu4.connection;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.mchange.v2.c3p0.DataSources;
 import org.junit.Test;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 /**
  * @Description C3P0连接池连接测试
@@ -13,6 +15,9 @@ import java.sql.Connection;
  * @Version 1.0
  */
 public class C3P0Test {
+    /**
+     * 方式一
+     */
     @Test
     public void testGetConnection() throws Exception {
         //获取数据库连接池
@@ -25,6 +30,19 @@ public class C3P0Test {
         //设置相关的参数
         cpds.setInitialPoolSize(10);
 
+        Connection connection = cpds.getConnection();
+        System.out.println(connection);
+
+        //销毁连接池
+        DataSources.destroy(cpds);
+    }
+
+    /**
+     * 方式2
+     */
+    @Test
+    public void testGetConnection1() throws SQLException {
+        ComboPooledDataSource cpds = new ComboPooledDataSource("helloc3p0");
         Connection connection = cpds.getConnection();
         System.out.println(connection);
     }
