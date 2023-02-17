@@ -117,6 +117,11 @@ public class TransactionTest {
             }
             throw new RuntimeException(e);
         } finally {
+            try {
+                connection.setAutoCommit(true);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
             JDBCUtils.closeResource(connection, null);
         }
     }
